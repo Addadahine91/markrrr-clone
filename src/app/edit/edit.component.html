@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="header">
+                <div class="header-items">
+                    <div class="company-name">
+                        Edit Cover Letter
+                    </div>
+                </div>
+                <div class="header-items">
+                    <div class="job-link">
+                        <a target="_blank" [href]="link">Link to posting</a>
+                    </div>
+                </div>
+            </div>
+            <form [formGroup]="form">
+                <p class="section-title" style="margin-top:30px;">Company Name</p>
+                <input 
+                class="text-input"
+                matInput
+                type="text"
+                formControlName="company"
+                required>
+        
+                <p class="section-title" style="margin-top:30px;">Job title</p>
+                <input 
+                class="text-input"
+                matInput
+                type="text"
+                formControlName="title"
+                required>
+
+                <p class="section-title" style="margin-top:30px;">Job Link</p>
+                <input 
+                class="text-input"
+                matInput
+                type="text"
+                formControlName="link">
+        
+                <div style="margin-bottom:25px;" class="content-editor">
+                    <p class="section-title" style="margin-top:30px;">Content</p>
+                    <angular-editor formControlName="body" [config]="editorConfig"></angular-editor>
+                </div>
+                
+            </form>
+            <button style="margin-bottom:50px;" (click)="save()" class="main-button" >Save</button>
+        </div>
+        <div class="col-lg-4">
+            <div style="margin-bottom:50px;" class="snippets-container">
+                <button class="main-button" routerLink="/create-snippet">Create Snippet</button>
+                <div class="cards-container">
+                    <div class="card" *ngFor="let card of snippets">
+                        <div class="title-container">
+                            <p class="card-title">{{card.content | slice:0:60}}</p>  
+                        </div> 
+                        <div class="icons-row">
+                            <button (click)="copy(card.content)" class="icon-button" mat-menu-item>
+                                <mat-icon class="icon">content_copy</mat-icon>
+                            </button>
+                            <button (click)="editSnippet(card._id)" class="icon-button" mat-menu-item>
+                                <mat-icon class="icon">edit</mat-icon>
+                            </button>
+                            <button (click)="deleteSnippet(card._id)" class="icon-button" mat-menu-item>
+                                <mat-icon class="icon">delete</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

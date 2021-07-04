@@ -1,0 +1,2 @@
+<app-home *ngIf="!this.authService.getIsAuthenticated()"></app-home>
+<app-list *ngIf="this.authService.getIsAuthenticated()"></app-list>

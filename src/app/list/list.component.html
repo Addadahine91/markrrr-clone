@@ -1,0 +1,31 @@
+<div class="container">
+    <button routerLink="/create" class="main-button">Create New</button>
+</div>
+
+<div class="container">
+    <div class="cards-container">
+        <div class="card" *ngFor="let letter of letters">
+            <div class="title-container">
+                <p class="card-title">{{letter.company}}</p>  
+                <mat-icon aria-hidden="false" class="down-icon" [matMenuTriggerFor]="menu" aria-label="expand-icon">expand_more</mat-icon>
+            </div>
+          <p class="card-subtitle">{{letter.title}}</p>  
+          <p class="card-date">Created: {{letter._id | idDate}}</p>  
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="preview(letter._id)">
+              <mat-icon>preview</mat-icon>
+              <span>Preview</span>
+            </button>
+            <button (click)="edit(letter._id)" mat-menu-item>
+              <mat-icon>edit</mat-icon>
+              <span>Edit</span>
+            </button>
+            <button (click)="delete(letter._id)" mat-menu-item>
+              <mat-icon>delete</mat-icon>
+              <span>Delete</span>
+            </button>
+          </mat-menu>
+        </div>
+    </div>
+</div>
+

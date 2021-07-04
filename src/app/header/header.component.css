@@ -1,0 +1,26 @@
+.navbar {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.nav-link {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+}
+
+.main-button {
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: white;
+  color: rgb(126, 126, 126);
+}

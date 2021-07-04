@@ -1,0 +1,11 @@
+<div class="container">
+    <h4>Create Snippet</h4>
+    <hr>
+
+    <form [formGroup]="form">
+        <p class="section-title" style="margin-top:10px;font-weight: 500;">Snippet*</p>
+        <textarea class="text-area" formControlName="content" name="text-area" rows="4"></textarea>
+    </form>
+    
+    <button class="main-button"(click)="save()" >Save</button>
+</div>

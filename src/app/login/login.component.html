@@ -1,0 +1,29 @@
+<div class="container" style="margin-bottom: 40px;">
+    <h4>Log In</h4>
+    <hr>
+
+    <form [formGroup]="form">
+        <p class="section-title" style="margin-top:30px;">Email</p>
+        <input 
+        class="text-input"
+        matInput
+        type="text"
+        formControlName="email"
+        required>
+
+        <p class="section-title" style="margin-top:30px;">Password</p>
+        <input 
+        class="text-input"
+        matInput
+        type="password"
+        formControlName="password"
+        required>
+    </form>
+
+    <button class="main-button" (click)="login()">Log In</button>
+    <button class="forgot-button" routerLink="/forgot-password">Forgot Password?</button>
+    <hr>
+
+    <p style="margin-top:10px;font-size: 14px;color:rgb(129, 129, 129)">Need an account? <span><a routerLink="/register">Sign Up</a></span></p>
+    <!-- <app-footer style="position: fixed;bottom:0"></app-footer> -->
+</div>

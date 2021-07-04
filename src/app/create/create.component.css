@@ -1,0 +1,15 @@
+.text-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+}
+
+.main-button {
+  border: 1px blueviolet solid;
+  background-color: transparent;
+  color: blueviolet;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 30px;
+}

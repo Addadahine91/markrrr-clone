@@ -1,0 +1,61 @@
+<div class="container" style="margin-bottom: 40px;">
+    <h4>Sign Up</h4>
+    <hr>
+
+    <form [formGroup]="form">
+        <p class="section-title" style="margin-top:30px;">First Name</p>
+        <input 
+        class="text-input"
+        matInput
+        type="text"
+        formControlName="fName"
+        required>
+
+        <p class="section-title" style="margin-top:30px;">Last Name</p>
+        <input 
+        class="text-input"
+        matInput
+        type="text"
+        formControlName="lName"
+        required>
+
+        <p class="section-title" style="margin-top:30px;">Email</p>
+        <input 
+        class="text-input"
+        matInput
+        type="text"
+        formControlName="email"
+        required>
+
+        <p class="section-title" style="margin-top:30px;">Password</p>
+        <input 
+        class="text-input"
+        matInput
+        type="password"
+        formControlName="password"
+        required>
+
+        <ul>
+            <li>Your password can’t be too similar to your other personal information.</li>
+            <li>Your password must contain at least 8 characters.</li>
+            <li>Your password can’t be a commonly used password.</li>
+            <li>Your password can’t be entirely numeric.</li>
+        </ul>
+
+        <p class="section-title" style="margin-top:30px;">Password Confirmation</p>
+        <input 
+        class="text-input"
+        matInput
+        type="password"
+        formControlName="confirmPassword"
+        required>
+        <p style="margin-top:10px;font-size: 12px;color:rgb(129, 129, 129)">Enter the same password as before, for verification.</p>
+
+    </form>
+
+    <button class="main-button" (click)="register()">Sign Up</button>
+    <hr>
+
+    <p style="margin-top:10px;font-size: 14px;color:rgb(129, 129, 129)">Already have an account? <span><a routerLink="/login">Log In</a></span></p>
+    <!-- <app-footer></app-footer> -->
+</div>

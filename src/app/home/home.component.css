@@ -1,0 +1,118 @@
+.left {
+  background-color: blue;
+}
+
+.right {
+  background-color: red;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.main-image {
+  float: right;
+  position: relative;
+  height: 350px;
+}
+
+.main-button {
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(0, 123, 255);
+  color: white;
+  font-size: 18px;
+}
+
+.left-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+span {
+  color: rgb(255, 170, 29);
+}
+
+.main-title {
+  font-size: 20px;
+  color: rgb(35, 40, 107);
+  display: inline-block;
+}
+
+.main-subtitle {
+  font-size: 18px;
+  color: rgb(35, 40, 107);
+}
+
+.container-fluid {
+  background-color: rgb(35, 40, 107);
+}
+
+.icon-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 30px;
+}
+
+@media (max-width: 700px) {
+  .icon {
+    flex-basis: 100%;
+  }
+}
+
+.icon-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.icon-subtitle {
+  color: white;
+}
+
+.icon-image {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.left-image-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.ready {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 30px;
+  width: 100%;
+}
+
+#link {
+  font-weight: 600;
+  color: rgb(0, 123, 255);
+}

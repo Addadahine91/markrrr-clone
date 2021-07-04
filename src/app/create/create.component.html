@@ -1,0 +1,32 @@
+<div class="container">
+    <h4>Cover Letter</h4>
+    <hr>
+
+    <form [formGroup]="form">
+        <p class="section-title" style="margin-top:30px;">Company Name*</p>
+        <input 
+        class="text-input"
+        matInput
+        type="text"
+        formControlName="company"
+        required>
+
+        <p class="section-title" style="margin-top:30px;">Job title*</p>
+        <input 
+        class="text-input"
+        matInput
+        type="text"
+        formControlName="title"
+        required>
+
+        <p class="section-title" style="margin-top:30px;">Link to Job Posting</p>
+        <input 
+        class="text-input"
+        matInput
+        type="text"
+        formControlName="link">
+
+    </form>
+
+    <button class="main-button" (click)="create()">Create Cover Letter</button>
+</div>

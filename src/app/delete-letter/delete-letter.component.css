@@ -1,0 +1,8 @@
+.main-button {
+  border: 1px blueviolet solid;
+  background-color: transparent;
+  color: blueviolet;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
